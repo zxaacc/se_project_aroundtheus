@@ -1,0 +1,79 @@
+.cards {
+  padding: 51px 20px 0 20px;
+  max-width: 880px;
+  font-family: "Inter", Arial, sans-serif;
+  justify-content: center;
+}
+
+.card__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 17px 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+  height: 361px;
+  margin: 0;
+}
+
+.card__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0 0;
+}
+.card__description {
+  display: flex;
+  background-color: white;
+  height: 79px;
+  border-radius: 0 0 10px 10px;
+  align-content: center;
+}
+.card__text {
+  margin: 0;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+  text-align: center;
+  padding: 25px 20px;
+  height: 29px;
+  width: 193px;
+}
+
+.card__like-button {
+  background: transparent url(../images/Groupheart.svg) center no-repeat;
+  width: 21px;
+  height: 18px;
+  border: none;
+  margin: 31px 20px 31px 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .card__like-button:hover {
+    opacity: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cards {
+    padding-top: 36px;
+  }
+
+  .card__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
