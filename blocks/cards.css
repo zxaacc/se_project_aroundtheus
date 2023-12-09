@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.card__list {
+.cards__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
@@ -64,14 +64,14 @@
     padding-top: 36px;
   }
 
-  .card__list {
+  .cards__list {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .card__list {
+  .cards__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
