@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 550px) {
   .cards {
-    padding-top: 36px;
+    padding: 0;
   }
 
   .cards__list {
@@ -26,6 +26,10 @@
 }
 
 @media screen and (max-width: 800px) {
+  .cards {
+    width: 282px;
+    margin: 0 10px 0;
+  }
   .cards__list {
     display: flex;
     flex-wrap: wrap;

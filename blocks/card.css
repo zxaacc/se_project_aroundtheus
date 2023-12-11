@@ -4,9 +4,14 @@
   width: 100%;
   min-height: 361px;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .card__image {
+  object-fit: cover;
   width: 282px;
   height: 282px;
   border-radius: 10px 10px 0 0;
@@ -35,9 +40,13 @@
   margin: 31px 20px 31px 0;
 }
 
-@media screen and (min-width: 1280px) {
-  .card__like-button:hover {
-    opacity: 50%;
-    cursor: pointer;
+.card__like-button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+  .card__description {
+    width: 282px;
   }
 }
