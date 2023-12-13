@@ -28,7 +28,7 @@
 @media screen and (max-width: 800px) {
   .cards {
     width: 282px;
-    margin: 0 10px 0;
+    margin: 0 auto;
   }
   .cards__list {
     display: flex;
