@@ -10,4 +10,4 @@ The site is not functional but maybe in the future it could be improved to be.
 
 Link to project  https://zxaacc.github.io/se_project_aroundtheus/
 
-Link to video 
+Link to video    https://drive.google.com/file/d/1BuxpvKft9wGwq_GA5GakHXivNj19VsCf/view?usp=sharing
