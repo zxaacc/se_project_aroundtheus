@@ -13,7 +13,6 @@
 
 .modal__container {
   position: relative;
-  height: 330px;
   width: 430px;
   background-color: #fff;
   border-radius: 10px;
@@ -25,6 +24,7 @@
   font-size: 24px;
   line-height: 29.05px;
   margin: 34px 28px 54px 36px;
+  width: 330px;
 }
 
 .modal__container_name {
@@ -32,6 +32,7 @@
   height: 27px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 20%);
+  border-radius: 0;
   margin: 0 36px 29px 36px;
   padding: 0;
 }
@@ -41,6 +42,7 @@
   height: 27px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 20%);
+  border-radius: 0;
   margin: 0 36px 48px 36px;
   padding: 0;
 }
@@ -72,7 +74,7 @@
   font-size: 18px;
   line-height: 21.78px;
   padding: 0;
-  margin: 0 36px;
+  margin: 0 36px 36px;
 }
 
 .modal__container_save-button:hover {
@@ -91,6 +93,7 @@
 
   .modal__container_heading {
     margin: 25px 22px 75px;
+    width: 238px;
   }
 
   .modal__container_name {

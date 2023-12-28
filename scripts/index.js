@@ -13,7 +13,7 @@ const initialCards = [
   },
   {
     name: "Denali Park",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
+    link: "https://unsplash.com/photos/a-group-of-mountains-with-snow-on-them-ZqZikxJ6R20",
   },
   {
     name: "Grand Teton",
@@ -26,3 +26,16 @@ const initialCards = [
 ];
 
 console.log(initialCards);
+
+const profileEditButton = document.querySelector("#profile__edit-button");
+const profileModal = document.querySelector(".modal");
+const modalCloseButton = document.querySelector(
+  "#modal__container_close-button"
+);
+
+profileEditButton.addEventListener("click", () => {
+  profileModal.classList.add("modal_opened");
+});
+modalCloseButton.addEventListener("click", () => {
+  profileModal.classList.remove("modal_opened");
+});
