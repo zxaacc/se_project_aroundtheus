@@ -1,27 +1,27 @@
 const initialCards = [
   {
     name: "Beaver Dam",
-    link: "https://unsplash.com/photos/silhouette-of-trees-near-body-of-water-during-sunset-lsoogGC_5dg",
+    link: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Trillium Lake",
-    link: "https://unsplash.com/photos/purple-flowers-near-lake-and-snow-covered-mountain-during-daytime-fbW_BcWLBUw",
+    link: "https://images.unsplash.com/photo-1598457005804-d316ba92cab2?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Mount Reinier",
-    link: "https://unsplash.com/photos/a-view-of-a-snow-covered-mountain-from-a-distance-FbXBVwY9g7Y",
+    link: "https://images.unsplash.com/photo-1696219364234-e726be37e134?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Denali Park",
-    link: "https://unsplash.com/photos/a-group-of-mountains-with-snow-on-them-ZqZikxJ6R20",
+    link: "https://images.unsplash.com/photo-1690000192856-4e2f5d10b095?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Grand Teton",
-    link: "https://unsplash.com/photos/brown-and-white-mountains-under-blue-sky-during-daytime-0Q4vVmx_PV8",
+    link: "https://images.unsplash.com/photo-1624375147958-678d727cc0c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Bozeman",
-    link: "https://unsplash.com/photos/brown-field-near-mountains-under-white-clouds-during-daytime-cWFlYyJp2PE",
+    link: "https://images.unsplash.com/photo-1608768557474-d4c5651d3230?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
