@@ -27,7 +27,7 @@
   width: 330px;
 }
 
-.modal__container_name {
+.modal__form_name {
   width: 358px;
   height: 27px;
   border: none;
@@ -37,7 +37,7 @@
   padding: 0;
 }
 
-.modal__container_description {
+.modal__form_description {
   width: 358px;
   height: 27px;
   border: none;
@@ -47,7 +47,7 @@
   padding: 0;
 }
 
-.modal__container_close-button {
+.modal__container_closeBtn {
   background: transparent url(../images/Close\ Icon.svg) center no-repeat;
   background-size: contain;
   height: 40px;
@@ -59,11 +59,11 @@
   right: -45px;
 }
 
-.modal__container_close-button:hover {
+.modal__container_closeBtn:hover {
   opacity: 60%;
   cursor: pointer;
 }
-.modal__container_save-button {
+.modal__form_saveBtn {
   width: 358px;
   height: 50.15px;
   border-style: none;
@@ -77,7 +77,7 @@
   margin: 0 36px 36px;
 }
 
-.modal__container_save-button:hover {
+.modal__form_saveBtn:hover {
   opacity: 80%;
   cursor: pointer;
 }
@@ -96,22 +96,22 @@
     width: 238px;
   }
 
-  .modal__container_name {
+  .modal__form_name {
     width: 238px;
     margin: 0 22px 30px;
   }
 
-  .modal__container_description {
+  .modal__form_description {
     width: 238px;
     margin: 0 22px 45px;
   }
 
-  .modal__container_save-button {
+  .modal__form_saveBtn {
     width: 238px;
     margin: 0 22px 25px;
   }
 
-  .modal__container_close-button {
+  .modal__container_closeBtn {
     height: 26px;
     width: 26px;
     left: 244px;

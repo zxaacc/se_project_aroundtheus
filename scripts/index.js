@@ -30,13 +30,13 @@ console.log(initialCards);
 const profileEditButton = document.querySelector("#profile__edit-button");
 const profileModal = document.querySelector(".modal");
 const modalCloseButton = document.querySelector(
-  "#modal__container_close-button"
+  "#modal__container_closeBtn"
 );
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
-const profileNameInput = document.querySelector(".modal__container_name");
+const profileNameInput = document.querySelector(".modal__form_name");
 const profileDescriptionInput = document.querySelector(
-  ".modal__container_description"
+  ".modal__form_description"
 );
 const profileEditForm = profileModal.querySelector(".modal__form");
 const cardTemplate =
