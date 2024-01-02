@@ -94,6 +94,8 @@
   .modal__container_heading {
     margin: 25px 22px 75px;
     width: 238px;
+    font-size: 18px;
+    line-height: 21.78px;
   }
 
   .modal__form_name {
@@ -108,12 +110,13 @@
 
   .modal__form_saveBtn {
     width: 238px;
+    height: 46px;
     margin: 0 22px 25px;
   }
 
   .modal__container_closeBtn {
     height: 26px;
     width: 26px;
-    left: 244px;
+    left: 200px;
   }
 }
