@@ -19,7 +19,7 @@
   margin: auto;
 }
 
-.modal__container_heading {
+.modal__container-heading {
   font-weight: 900;
   font-size: 24px;
   line-height: 29.05px;
@@ -27,7 +27,7 @@
   width: 330px;
 }
 
-.modal__form_name {
+.modal__form-name {
   width: 358px;
   height: 27px;
   border: none;
@@ -37,7 +37,7 @@
   padding: 0;
 }
 
-.modal__form_description {
+.modal__form-description {
   width: 358px;
   height: 27px;
   border: none;
@@ -47,7 +47,7 @@
   padding: 0;
 }
 
-.modal__container_closeBtn {
+.modal__container-closeBtn {
   background: transparent url(../images/Close\ Icon.svg) center no-repeat;
   background-size: contain;
   height: 40px;
@@ -59,11 +59,11 @@
   right: -45px;
 }
 
-.modal__container_closeBtn:hover {
+.modal__container-closeBtn:hover {
   opacity: 60%;
   cursor: pointer;
 }
-.modal__form_saveBtn {
+.modal__form-saveBtn {
   width: 358px;
   height: 50.15px;
   border-style: none;
@@ -77,7 +77,7 @@
   margin: 0 36px 36px;
 }
 
-.modal__form_saveBtn:hover {
+.modal__form-saveBtn:hover {
   opacity: 80%;
   cursor: pointer;
 }
@@ -91,30 +91,30 @@
     width: 282px;
   }
 
-  .modal__container_heading {
+  .modal__container-heading {
     margin: 25px 22px 75px;
     width: 238px;
     font-size: 18px;
     line-height: 21.78px;
   }
 
-  .modal__form_name {
+  .modal__form-name {
     width: 238px;
     margin: 0 22px 30px;
   }
 
-  .modal__form_description {
+  .modal__form-description {
     width: 238px;
     margin: 0 22px 45px;
   }
 
-  .modal__form_saveBtn {
+  .modal__form-saveBtn {
     width: 238px;
     height: 46px;
     margin: 0 22px 25px;
   }
 
-  .modal__container_closeBtn {
+  .modal__container-closeBtn {
     height: 26px;
     width: 26px;
     left: 200px;
