@@ -112,6 +112,8 @@
     width: 238px;
     height: 46px;
     margin: 0 22px 25px;
+    font-size: 14px;
+    line-height: 16.94px;
   }
 
   .modal__container-closeBtn {
