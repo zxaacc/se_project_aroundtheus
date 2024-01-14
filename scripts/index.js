@@ -67,6 +67,11 @@ cardLikeButton.addEventListener("click", () => {
   cardLikeButton.classList.toggle("card__like-button_active");
 });
 
+const cardRemoveButton = cardElement.querySelector("#card__remove-button");
+cardRemoveButton.addEventListener("click", () => {
+  cardElement.remove();
+});
+
   return cardElement;
 }
 

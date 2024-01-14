@@ -50,6 +50,21 @@
   cursor: pointer;
 }
 
+.card__remove-button {
+  background: transparent url(../images/TrashtrashCan.svg) center no-repeat;
+  border-style: none;
+  width: 18px;
+  height: 19.3px;
+  position: absolute;
+  padding: 0;
+  margin: 18px 15px 244px 249px;
+}
+
+.card__remove-button:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 550px) {
   .card__description {
     max-width: 282px;
