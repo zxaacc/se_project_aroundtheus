@@ -62,15 +62,31 @@ function getCardElement(cardData) {
   cardImageElement.alt = cardData.name;
   cardTextElement.textContent = cardData.name;
 
-const cardLikeButton = cardElement.querySelector("#card__like-button");
-cardLikeButton.addEventListener("click", () => {
-  cardLikeButton.classList.toggle("card__like-button_active");
-});
+  const cardLikeButton = cardElement.querySelector("#card__like-button");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_active");
+  });
 
-const cardRemoveButton = cardElement.querySelector("#card__remove-button");
-cardRemoveButton.addEventListener("click", () => {
-  cardElement.remove();
-});
+  const cardRemoveButton = cardElement.querySelector("#card__remove-button");
+  cardRemoveButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
+  const previewModal = document.querySelector("#modal__preview");
+  const previewModalImage = document.querySelector("#modal__preview-image");
+  const previewModalDescription = document.querySelector(
+    "#modal__preview-description"
+  );
+  const previewModalCloseBtn = document.querySelector(
+    "#modal__preview-closeBtn"
+  );
+
+  cardImageElement.addEventListener("click", () => {
+    openModal(previewModal);
+    previewModalImage.src = cardData.link;
+    previewModalImage.alt = cardData.name;
+    previewModalDescription.value = profileDescription.textContent;
+  });
 
   return cardElement;
 }
@@ -86,6 +102,10 @@ function addModalFormSubmit(evt) {
 function renderCard(cardData, wrapper) {
   const cardElement = getCardElement(cardData);
   wrapper.prepend(cardElement);
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
 }
 
 addModalForm.addEventListener("submit", addModalFormSubmit);
@@ -116,10 +136,3 @@ profileAddButton.addEventListener("click", (addModalFormSubmit) => {
 addModalCloseButton.addEventListener("click", () => {
   closeModal();
 });
-
-// const cardLikeButtons = document.querySelectorAll("#card__like-button");
-// cardLikeButtons.forEach((cardLikeButton) => {
-//   cardLikeButton.addEventListener("click", () => {
-//     cardLikeButton.classList.toggle("card__like-button_active");
-//   });
-// });

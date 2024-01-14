@@ -16,6 +16,11 @@
   height: 282px;
   border-radius: 10px 10px 0 0;
 }
+
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__description {
   justify-content: space-between;
   display: flex;

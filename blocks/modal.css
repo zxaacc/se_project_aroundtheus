@@ -86,6 +86,30 @@
   display: flex;
 }
 
+.modal__preview {
+}
+
+.modal__preview-image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.modal__preview-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  margin: 10px 0 0 0;
+}
+
+.modal__preview-closeBtn {
+  background: transparent url(../images/Close\ Icon.svg) center no-repeat;
+}
+
+.modal__preview-closeBtn:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 550px) {
   .modal__container {
     width: 282px;
