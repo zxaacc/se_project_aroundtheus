@@ -80,12 +80,17 @@ function getCardElement(cardData) {
   const previewModalCloseBtn = document.querySelector(
     "#modal__preview-closeBtn"
   );
+  const cardDescription = document.querySelector(".card__text");
 
   cardImageElement.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImage.src = cardData.link;
     previewModalImage.alt = cardData.name;
-    previewModalDescription.value = profileDescription.textContent;
+    previewModalDescription.textContent = cardData.name;
+  });
+
+  previewModalCloseBtn.addEventListener("click", () => {
+    closeModal();
   });
 
   return cardElement;
