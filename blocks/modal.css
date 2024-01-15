@@ -94,10 +94,14 @@
   margin: 0 auto;
 }
 
+.modal__image-container {
+  position: relative;
+  margin: auto;
+}
+
 .modal__preview-image {
   max-width: 75vw;
   max-height: 75vh;
-  margin: auto;
 }
 
 .modal__preview-description {
@@ -106,9 +110,9 @@
   line-height: 14.52px;
   margin: auto;
   color: #fff;
-  position: fixed;
-  top: 715px;
-  left: 130px;
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
 }
 
 .modal__preview-closeBtn {
@@ -118,8 +122,8 @@
   border-style: none;
   position: absolute;
   margin: 0 auto;
-  top: 285px;
-  right: 30px;
+  top: -40px;
+  right: -40px;
   padding: 0;
 }
 
