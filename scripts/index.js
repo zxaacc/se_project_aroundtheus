@@ -28,8 +28,8 @@ const initialCards = [
 console.log(initialCards);
 
 const profileEditButton = document.querySelector("#profile__edit-button");
-const profileModal = document.querySelector(".modal");
-const modalCloseButton = document.querySelector("#modal__container-closeBtn");
+const profileModal = document.querySelector("#profile-modal");
+const profileCloseButton = document.querySelector("#modal__container-closeBtn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const profileNameInput = document.querySelector(".modal__form-name");
@@ -53,6 +53,10 @@ const addFormCardUrlInput = addModalForm.querySelector("#modal__form-URL");
 function closeModal() {
   document.querySelector(".modal_opened").classList.remove("modal_opened");
 }
+// function closePopup(popup) {
+//   popup.classList.remove('modal_opened');
+// }
+// after applying this function the buttons wouldn't close, what can I do?
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -82,11 +86,12 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
-function addModalFormSubmit(evt) {
+function handleAddModalFormSubmit(evt) {
   evt.preventDefault();
   const name = addFormCardTitleInput.value;
   const link = addFormCardUrlInput.value;
   renderCard({ name, link }, cardListElement);
+  // closePopup();
   closeModal();
   addModalForm.reset();
 }
@@ -100,15 +105,16 @@ function openModal(modal) {
   modal.classList.add("modal_opened");
 }
 
-addModalForm.addEventListener("submit", addModalFormSubmit);
+addModalForm.addEventListener("submit", handleAddModalFormSubmit);
 
 profileEditButton.addEventListener("click", () => {
   profileNameInput.value = profileName.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileModal.classList.add("modal_opened");
+  openModal(profileModal);
 });
 
-modalCloseButton.addEventListener("click", () => {
+profileCloseButton.addEventListener("click", () => {
+  // closePopup();
   closeModal();
 });
 
@@ -116,16 +122,18 @@ profileEditForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
+  // closePopup();
   closeModal();
 });
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListElement));
 
-profileAddButton.addEventListener("click", (addModalFormSubmit) => {
+profileAddButton.addEventListener("click", (handleAddModalFormSubmit) => {
   profileAddModal.classList.add("modal_opened");
 });
 
 addModalCloseButton.addEventListener("click", () => {
+  // closePopup();
   closeModal();
 });
 
@@ -137,5 +145,6 @@ const previewModalDescription = document.querySelector(
 const previewModalCloseBtn = document.querySelector("#modal__preview-closeBtn");
 const cardDescription = document.querySelector(".card__text");
 previewModalCloseBtn.addEventListener("click", () => {
+  // closePopup();
   closeModal();
 });
