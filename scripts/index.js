@@ -50,13 +50,9 @@ const addModalForm = document.querySelector("#modal__form-add");
 const addFormCardTitleInput = addModalForm.querySelector("#modal__form-title");
 const addFormCardUrlInput = addModalForm.querySelector("#modal__form-URL");
 
-function closeModal() {
-  document.querySelector(".modal_opened").classList.remove("modal_opened");
+function closeModal(popup) {
+  popup.classList.remove("modal_opened");
 }
-// function closePopup(popup) {
-//   popup.classList.remove('modal_opened');
-// }
-// after applying this function the buttons wouldn't close, what can I do?
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -91,8 +87,7 @@ function handleAddModalFormSubmit(evt) {
   const name = addFormCardTitleInput.value;
   const link = addFormCardUrlInput.value;
   renderCard({ name, link }, cardListElement);
-  // closePopup();
-  closeModal();
+  closeModal(profileAddModal);
   addModalForm.reset();
 }
 
@@ -114,16 +109,14 @@ profileEditButton.addEventListener("click", () => {
 });
 
 profileCloseButton.addEventListener("click", () => {
-  // closePopup();
-  closeModal();
+  closeModal(profileModal);
 });
 
 profileEditForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  // closePopup();
-  closeModal();
+  closeModal(profileModal);
 });
 
 initialCards.forEach((cardData) => renderCard(cardData, cardListElement));
@@ -133,8 +126,7 @@ profileAddButton.addEventListener("click", (handleAddModalFormSubmit) => {
 });
 
 addModalCloseButton.addEventListener("click", () => {
-  // closePopup();
-  closeModal();
+  closeModal(profileAddModal);
 });
 
 const previewModal = document.querySelector("#modal__preview");
@@ -145,6 +137,5 @@ const previewModalDescription = document.querySelector(
 const previewModalCloseBtn = document.querySelector("#modal__preview-closeBtn");
 const cardDescription = document.querySelector(".card__text");
 previewModalCloseBtn.addEventListener("click", () => {
-  // closePopup();
-  closeModal();
+  closeModal(previewModal);
 });
