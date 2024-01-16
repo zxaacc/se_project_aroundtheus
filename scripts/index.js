@@ -41,7 +41,7 @@ const cardTemplate =
   document.querySelector("#card_template").content.firstElementChild;
 const cardListElement = document.querySelector(".cards__list");
 
-const profileAddModal = document.querySelector("#add__button-modal");
+const profileAddModal = document.querySelector("#card-modal");
 const profileAddButton = document.querySelector("#profile__add-button");
 const addModalCloseButton = document.querySelector(
   "#addModal__container-closeBtn"
