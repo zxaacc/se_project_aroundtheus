@@ -122,7 +122,7 @@ profileEditForm.addEventListener("submit", (evt) => {
 initialCards.forEach((cardData) => renderCard(cardData, cardListElement));
 
 profileAddButton.addEventListener("click", (handleAddModalFormSubmit) => {
-  profileAddModal.classList.add("modal_opened");
+  openModal(profileAddModal);
 });
 
 addModalCloseButton.addEventListener("click", () => {
