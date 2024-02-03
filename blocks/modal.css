@@ -82,7 +82,7 @@
   position: absolute;
   left: 0;
   transition: opacity 0.3s;
-  
+  margin-top: -29px;
 }
 
 .modal__error_disabled {
@@ -96,6 +96,7 @@ display: none;
   font-size: 12px;
   line-height: 14.52px;
   margin: 0 0 13px 36px;
+  margin-top: -29px;
 }
 
 .modal__input_type_error {
@@ -127,7 +128,8 @@ display: none;
 
 .modal__button_disabled {
   color: #fff;
-  display: disabled;
+  opacity: 0.2;
+  pointer-events: none;
   cursor: default;
 }
 

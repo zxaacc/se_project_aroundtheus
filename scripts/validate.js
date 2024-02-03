@@ -24,7 +24,7 @@ function checkInputValidity(formEl, inputEl, options) {
 }
 
 function hasInvalidInput(inputList) {
-  return !input.every((inputEl) => inputEl.validity.valid);
+  return !inputList.every((inputEl) => inputEl.validity.valid);
 }
 
 function disbaleModalSaveButton(inputlist) {
@@ -47,12 +47,14 @@ function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
       foundInvalid = true;
     }
   });
+console.log(foundInvalid)
 
   if (hasInvalidInput(inputEls)) {
     submitButton.classList.add(inactiveButtonClass);
     submitButton.disabled = true;
   } else {
     submitButton.classList.remove(inactiveButtonClass);
+    submitButton.disabled = false;
   }
 }
 

@@ -142,10 +142,15 @@ previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-// const modalOverlay = document.querySelector(".modal");
-// modalOverlay.addEventListener("click", () => {
-//   closeModal(profileModal);
-// });
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("click",(e) => {
+    if (e.target.classList.contains("modal")) {
+      closeModal(e.target)
+    }
+  });
+ });
+
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
