@@ -27,17 +27,17 @@ function hasInvalidInput(inputList) {
   return !inputList.every((inputEl) => inputEl.validity.valid);
 }
 
-function disbaleModalSaveButton(inputlist) {
-  if (!inputEl.validity.valid) {
-    inputEl.classList.add(inactiveButtonClass);
-  }
-}
+// function disbaleModalSaveButton(inputlist) {
+//   if (!inputEl.validity.valid) {
+//     inputEl.classList.add(inactiveButtonClass);
+//   }
+// }
 
-function enableModalSaveButton(inputList) {
-  if (inputEl.validity.valid) {
-    inputEl.classList.remove(inactiveButtonClass);
-  }
-}
+// function enableModalSaveButton(inputList) {
+//   if (inputEl.validity.valid) {
+//     inputEl.classList.remove(inactiveButtonClass);
+//   }
+// }
 
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   let foundInvalid = false;
@@ -61,7 +61,12 @@ console.log(foundInvalid)
 function setEventListeners(formEl, options) {
   const { inputSelector } = options;
   const inputEls = [...formEl.querySelectorAll(inputSelector)];
-  const submitButton = formEl.querySelector(".modal__button");
+  const submitButton = [...formEl.querySelectorAll(submitButtonSelector)];
+  toggleButtonState(
+    [...formEl.querySelectorAll(options.inputSelector)],
+    submitButton,
+    options
+  );
   inputEls.forEach((inputEl) => {
     inputEl.addEventListener("input", (e) => {
       checkInputValidity(formEl, inputEl, options);
@@ -79,24 +84,13 @@ function enableValidation(options) {
 
     setEventListeners(formEl, options);
     const submitButton = formEl.querySelector(options.submitButtonSelector);
-    toggleButtonState(
-      [...formEl.querySelectorAll(options.inputSelector)],
-      submitButton,
-      options
-    );
+    // toggleButtonState(
+    //   [...formEl.querySelectorAll(options.inputSelector)],
+    //   submitButton,
+    //   options
+    // );
   });
 }
-
-//look for all inputs inside of form
-//loop through all the inputs to see if all are valid
-// if input is not valid
-//get validation message
-//add error class to input
-//display error message
-//disbale button
-//if all inputs are valid
-//enable button
-//reset error messages
 
 const config = {
   formSelector: ".modal__form",

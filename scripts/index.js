@@ -38,7 +38,7 @@ const profileDescriptionInput = document.querySelector(
 );
 const profileSaveButton = document.querySelector("#modal__form-saveBtn");
 
-const profileEditForm = profileModal.querySelector(".modal__form");
+const profileEditForm = document.forms.editProfileForm;
 const cardTemplate =
   document.querySelector("#card_template").content.firstElementChild;
 const cardListElement = document.querySelector(".cards__list");
