@@ -144,28 +144,27 @@ previewModalCloseBtn.addEventListener("click", () => {
 
 const modals = document.querySelectorAll(".modal");
 modals.forEach((modal) => {
-  modal.addEventListener("click",(e) => {
+  modal.addEventListener("click", (e) => {
     if (e.target.classList.contains("modal")) {
-      closeModal(e.target)
+      closeModal(e.target);
     }
   });
- });
-
+});
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal(profileModal);
-  };
+  }
 });
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal(profileAddModal);
-  };
+  }
 });
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal(previewModal);
-  };
+  }
 });

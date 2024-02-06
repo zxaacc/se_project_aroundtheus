@@ -16,6 +16,7 @@ function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
 }
 
 function checkInputValidity(formEl, inputEl, options) {
+  console.log(inputEl);
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, options);
   } else {
@@ -27,27 +28,25 @@ function hasInvalidInput(inputList) {
   return !inputList.every((inputEl) => inputEl.validity.valid);
 }
 
-// function disbaleModalSaveButton(inputlist) {
-//   if (!inputEl.validity.valid) {
-//     inputEl.classList.add(inactiveButtonClass);
-//   }
-// }
+function disbaleModalSaveButton(inputlist) {
+  if (!inputEl.validity.valid) {
+    inputEl.classList.add(inactiveButtonClass);
+  }
+}
 
-// function enableModalSaveButton(inputList) {
-//   if (inputEl.validity.valid) {
-//     inputEl.classList.remove(inactiveButtonClass);
-//   }
-// }
+function enableModalSaveButton(inputList) {
+  if (inputEl.validity.valid) {
+    inputEl.classList.remove(inactiveButtonClass);
+  }
+}
 
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   let foundInvalid = false;
-
   inputEls.forEach((inputEl) => {
     if (!inputEl.validity.valid) {
       foundInvalid = true;
     }
   });
-console.log(foundInvalid)
 
   if (hasInvalidInput(inputEls)) {
     submitButton.classList.add(inactiveButtonClass);
@@ -59,9 +58,9 @@ console.log(foundInvalid)
 }
 
 function setEventListeners(formEl, options) {
-  const { inputSelector } = options;
+  const { inputSelector, submitButtonSelector } = options;
   const inputEls = [...formEl.querySelectorAll(inputSelector)];
-  const submitButton = [...formEl.querySelectorAll(submitButtonSelector)];
+  const submitButton = formEl.querySelector(submitButtonSelector);
   toggleButtonState(
     [...formEl.querySelectorAll(options.inputSelector)],
     submitButton,
@@ -84,11 +83,11 @@ function enableValidation(options) {
 
     setEventListeners(formEl, options);
     const submitButton = formEl.querySelector(options.submitButtonSelector);
-    // toggleButtonState(
-    //   [...formEl.querySelectorAll(options.inputSelector)],
-    //   submitButton,
-    //   options
-    // );
+    toggleButtonState(
+      [...formEl.querySelectorAll(options.inputSelector)],
+      submitButton,
+      options
+    );
   });
 }
 
