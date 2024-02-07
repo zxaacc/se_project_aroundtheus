@@ -82,7 +82,6 @@
   position: absolute;
   left: 0;
   transition: opacity 0.3s;
-  margin-top: -29px;
 }
 
 .modal__error_disabled {

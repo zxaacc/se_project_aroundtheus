@@ -151,20 +151,8 @@ modals.forEach((modal) => {
   });
 });
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeModal(profileModal);
+function handleEscClick(e){
+  if (e.key === "Escape"){
+    closeModal(e.target);
   }
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeModal(profileAddModal);
-  }
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeModal(previewModal);
-  }
-});
+}
