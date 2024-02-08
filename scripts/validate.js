@@ -28,16 +28,16 @@ function hasInvalidInput(inputList) {
   return !inputList.every((inputEl) => inputEl.validity.valid);
 }
 
-function disbaleModalSaveButton(inputlist) {
-  if (!inputEl.validity.valid) {
-    inputEl.classList.add(inactiveButtonClass);
-  }
-}
+// Expand paramater list to include inactiveButtonClass
+function disableModalSaveButton(submitButton, { inactiveButtonClass }) {
+   submitButton.classList.add(inactiveButtonClass);
+     submitButton.disabled = true;
 
-function enableModalSaveButton(inputList) {
-  if (inputEl.validity.valid) {
-    inputEl.classList.remove(inactiveButtonClass);
   }
+
+function enableModalSaveButton(submitButton, { inactiveButtonClass }) {
+  submitButton.classList.remove(inactiveButtonClass);
+  submitButton.disabled = false;
 }
 
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
@@ -49,11 +49,10 @@ function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
   });
 
   if (hasInvalidInput(inputEls)) {
-    submitButton.classList.add(inactiveButtonClass);
-    submitButton.disabled = true;
+    disableModalSaveButton(submitButton, { inactiveButtonClass })
+   
   } else {
-    submitButton.classList.remove(inactiveButtonClass);
-    submitButton.disabled = false;
+    enableModalSaveButton(submitButton, { inactiveButtonClass })
   }
 }
 

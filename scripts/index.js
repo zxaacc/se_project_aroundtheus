@@ -151,8 +151,9 @@ modals.forEach((modal) => {
   });
 });
 
-function handleEscClick(e){
-  if (e.key === "Escape"){
+function handleEscClick(e) {
+  if (e.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
     closeModal(e.target);
   }
 }
