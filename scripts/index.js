@@ -54,6 +54,7 @@ const addFormCardUrlInput = addModalForm.querySelector("#modal__form-URL");
 
 function closeModal(popup) {
   popup.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscClick);
 }
 
 function getCardElement(cardData) {
@@ -100,6 +101,7 @@ function renderCard(cardData, wrapper) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscClick);
 }
 
 addModalForm.addEventListener("submit", handleAddModalFormSubmit);
@@ -154,6 +156,6 @@ modals.forEach((modal) => {
 function handleEscClick(e) {
   if (e.key === "Escape") {
     const openedModal = document.querySelector(".modal_opened");
-    closeModal(e.target);
+    closeModal(openedModal);
   }
 }

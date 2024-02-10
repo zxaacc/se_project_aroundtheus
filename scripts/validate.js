@@ -60,11 +60,7 @@ function setEventListeners(formEl, options) {
   const { inputSelector, submitButtonSelector } = options;
   const inputEls = [...formEl.querySelectorAll(inputSelector)];
   const submitButton = formEl.querySelector(submitButtonSelector);
-  toggleButtonState(
-    [...formEl.querySelectorAll(options.inputSelector)],
-    submitButton,
-    options
-  );
+  toggleButtonState(inputEls, submitButton, options);
   inputEls.forEach((inputEl) => {
     inputEl.addEventListener("input", (e) => {
       checkInputValidity(formEl, inputEl, options);
@@ -82,11 +78,6 @@ function enableValidation(options) {
 
     setEventListeners(formEl, options);
     const submitButton = formEl.querySelector(options.submitButtonSelector);
-    toggleButtonState(
-      [...formEl.querySelectorAll(options.inputSelector)],
-      submitButton,
-      options
-    );
   });
 }
 
