@@ -1,3 +1,6 @@
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
+
 const initialCards = [
   {
     name: "Beaver Dam",
@@ -24,6 +27,14 @@ const initialCards = [
     link: "https://images.unsplash.com/photo-1608768557474-d4c5651d3230?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
+
+const cardData = { 
+  name: "Beaver Dam",
+    link: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+}
+
+const card = new Card(cardData, "#card_template"); 
+card.getView();
 
 console.log(initialCards);
 
@@ -65,15 +76,15 @@ function getCardElement(cardData) {
   cardImageElement.alt = cardData.name;
   cardTextElement.textContent = cardData.name;
 
-  const cardLikeButton = cardElement.querySelector("#card__like-button");
-  cardLikeButton.addEventListener("click", () => {
-    cardLikeButton.classList.toggle("card__like-button_active");
-  });
+  // const cardLikeButton = cardElement.querySelector("#card__like-button");
+  // cardLikeButton.addEventListener("click", () => {
+  //   cardLikeButton.classList.toggle("card__like-button_active");
+  // });
 
-  const cardRemoveButton = cardElement.querySelector("#card__remove-button");
-  cardRemoveButton.addEventListener("click", () => {
-    cardElement.remove();
-  });
+  // const cardRemoveButton = cardElement.querySelector("#card__remove-button");
+  // cardRemoveButton.addEventListener("click", () => {
+  //   cardElement.remove();
+  // });
 
   cardImageElement.addEventListener("click", () => {
     openModal(previewModal);
@@ -159,3 +170,14 @@ function handleEscClick(e) {
     closeModal(openedModal);
   }
 }
+
+const config = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: "modal__button_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
+};
+
+enableValidation(config);
