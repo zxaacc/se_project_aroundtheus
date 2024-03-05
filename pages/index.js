@@ -180,4 +180,10 @@ const config = {
   errorClass: "modal__error_visible",
 };
 
-enableValidation(config);
+// enableValidation(config);
+
+const editCardFormValidator = new FormValidator(config, profileEditForm);
+const addCardFormValidator = new FormValidator(config, addModalForm);
+
+editCardFormValidator.enableValidation();
+addCardFormValidator.enableValidation();
