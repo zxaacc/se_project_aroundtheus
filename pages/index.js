@@ -28,12 +28,12 @@ const initialCards = [
   },
 ];
 
-const cardData = { 
+const cardData = {
   name: "Beaver Dam",
-    link: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-}
+  link: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+};
 
-const card = new Card(cardData, "#card_template"); 
+const card = new Card(cardData, "#card_template");
 card.getView();
 
 console.log(initialCards);
@@ -76,15 +76,15 @@ function getCardElement(cardData) {
   cardImageElement.alt = cardData.name;
   cardTextElement.textContent = cardData.name;
 
-  // const cardLikeButton = cardElement.querySelector("#card__like-button");
-  // cardLikeButton.addEventListener("click", () => {
-  //   cardLikeButton.classList.toggle("card__like-button_active");
-  // });
+  const cardLikeButton = cardElement.querySelector("#card__like-button");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_active");
+  });
 
-  // const cardRemoveButton = cardElement.querySelector("#card__remove-button");
-  // cardRemoveButton.addEventListener("click", () => {
-  //   cardElement.remove();
-  // });
+  const cardRemoveButton = cardElement.querySelector("#card__remove-button");
+  cardRemoveButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
 
   cardImageElement.addEventListener("click", () => {
     openModal(previewModal);
@@ -185,5 +185,5 @@ const config = {
 const editCardFormValidator = new FormValidator(config, profileEditForm);
 const addCardFormValidator = new FormValidator(config, addModalForm);
 
-editCardFormValidator.enableValidation();
-addCardFormValidator.enableValidation();
+// editCardFormValidator.enableValidation();
+// addCardFormValidator.enableValidation();
