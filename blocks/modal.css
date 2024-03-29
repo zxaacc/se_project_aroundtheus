@@ -40,9 +40,9 @@
   padding: 0;
 }
 
-.modal__form-name:invalid {
+/* .modal__form-name:invalid {
   border-bottom: 1px solid #ff0000;
-}
+} */
 
 .modal__form-description {
   width: 358px;
@@ -54,9 +54,9 @@
   padding: 0;
 }
 
-.modal__form-description:invalid {
+/* .modal__form-description:invalid {
   border-bottom: 1px solid #ff0000;
-}
+} */
 
 .modal__container-closeBtn {
   background: transparent url(../images/Close\ Icon.svg) center no-repeat;

@@ -67,7 +67,7 @@ export default class FormValidator {
     this._inputEls = [...formEl.querySelectorAll(inputSelector)];
     this._submitButton = formEl.querySelector(submitButtonSelector);
     this._toggleButtonState(inputEls, submitButton, options);
-    inputEls.forEach((inputEl) => {
+    this._inputEls.forEach((inputEl) => {
       inputEl.addEventListener("input", (e) => {
         this._checkInputValidity(formEl, inputEl, options);
         this._toggleButtonState(inputEls, submitButton, options);
@@ -75,7 +75,7 @@ export default class FormValidator {
     });
   }
 
-  _enableValidation(options) {
+  enableValidation(config) {
     const formEls = [...document.querySelectorAll(options.formSelector)];
     formEls.forEach((formEl) => {
       formEl.addEventListener("submit", (e) => {
