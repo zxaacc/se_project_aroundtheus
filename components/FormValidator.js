@@ -33,7 +33,7 @@ export default class FormValidator {
   }
 
   _hasInvalidInput(inputList) {
-    return !this._inputList.every((inputEl) => inputEl.validity.valid);
+    return !this._inputEls.every((inputEl) => inputEl.validity.valid);
   }
 
   // Expand paramater list to include inactiveButtonClass
@@ -56,9 +56,9 @@ export default class FormValidator {
     });
 
     if (this._hasInvalidInput(this._inputEls)) {
-      disableModalSaveButton(submitButton, { inactiveButtonClass });
+      this._disableModalSaveButton(submitButton, { inactiveButtonClass });
     } else {
-      enableModalSaveButton(submitButton, { inactiveButtonClass });
+     this.enableModalSaveButton(submitButton, { inactiveButtonClass });
     }
   }
 
@@ -66,7 +66,7 @@ export default class FormValidator {
     const { inputSelector, submitButtonSelector } = options;
     this._inputEls = [...formEl.querySelectorAll(inputSelector)];
     this._submitButton = formEl.querySelector(submitButtonSelector);
-    this._toggleButtonState(inputEls, submitButton, options);
+    this._toggleButtonState(this._inputEls, this._submitButton, options);
     this._inputEls.forEach((inputEl) => {
       inputEl.addEventListener("input", (e) => {
         this._checkInputValidity(formEl, inputEl, options);
@@ -75,15 +75,15 @@ export default class FormValidator {
     });
   }
 
-  enableValidation(config) {
+  enableValidation(options) {
     const formEls = [...document.querySelectorAll(options.formSelector)];
-    formEls.forEach((formEl) => {
-      formEl.addEventListener("submit", (e) => {
+    formEls.forEach((formEls) => {
+      formEls.addEventListener("submit", (e) => {
         e.preventDefault();
       });
 
-      _setEventListeners(formEl, options);
-      this._submitButton = formEl.querySelector(options.submitButtonSelector);
+      this._setEventListeners(formEls, options);
+      this._submitButton = formEls.querySelector(options.submitButtonSelector);
     });
   }
 
